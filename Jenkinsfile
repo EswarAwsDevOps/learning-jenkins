@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  tools {
+    maven 'maven'
+  }
+
   options {
     buildDiscarder(logRotator(numToKeepStr: '1'))
     ansiColor('xterm')
