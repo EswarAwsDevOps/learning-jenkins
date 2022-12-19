@@ -14,7 +14,7 @@ pipeline {
       steps {
         echo 'Hello World'
         echo "${XYZ}"
-        eco "${SSH}"
+        echo "${SSH}"
       }
     }
   }
