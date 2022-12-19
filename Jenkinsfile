@@ -1,7 +1,14 @@
 pipeline {
   agent any
 
-  options { buildDiscarder(logRotator(numToKeepStr: '1')) }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '1'))
+    ansiColor('xterm')
+  }
+
+  parameters {
+    string(name: 'APP_URL', defaultValue: '', description: 'App URL')
+  }
 
   environment {
     ABC="abc"
