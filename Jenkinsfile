@@ -28,7 +28,7 @@ pipeline {
     stage('New') {
       when {
         expression {
-          APP_URL == "google.com"
+          params.APP_URL == "google.com"
         }
 
       }
