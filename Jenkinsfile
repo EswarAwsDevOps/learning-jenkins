@@ -6,6 +6,11 @@ pipeline {
     ansiColor('xterm')
   }
 
+  triggers {
+    //cron('0 * * * *')
+    pollSCM('* * * * *')
+  }
+
   parameters {
     string(name: 'APP_URL', defaultValue: '', description: 'App URL')
   }
