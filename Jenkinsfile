@@ -3,6 +3,7 @@ pipeline {
 
   environment {
     ABC="abc"
+    SSH = credentials("SSH")
   }
 
   stages {
@@ -13,6 +14,7 @@ pipeline {
       steps {
         echo 'Hello World'
         echo "${XYZ}"
+        eco "${SSH}"
       }
     }
   }
