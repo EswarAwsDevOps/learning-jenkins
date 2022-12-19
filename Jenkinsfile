@@ -74,29 +74,40 @@ pipeline {
 
   stages {
 
-    stage('One') {
-      steps {
-        echo "one"
+    stage('O1') {
+      parallel {
+        stage('One') {
+          steps {
+            echo "one"
+          }
+        }
+
+        stage('Two') {
+          steps {
+            echo "two"
+          }
+        }
       }
+
     }
 
-    stage('Two') {
-      steps {
-        echo "two"
-      }
-    }
+    stage('O2') {
+      parallel {
+        stage('Three') {
+          steps {
+            echo "three"
+          }
+        }
 
-    stage('Three') {
-      steps {
-        echo "three"
+        stage('Four') {
+          steps {
+            echo "Four"
+          }
+        }
       }
-    }
 
-    stage('Four') {
-      steps {
-        echo "Four"
-      }
     }
+    
 
   }
 
