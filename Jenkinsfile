@@ -37,6 +37,19 @@ pipeline {
         sh 'mvn compile'
       }
     }
+
+    stage('Example') {
+      input {
+        message "Should we continue?"
+        ok "Yes, we should."
+        submitter "admin"
+
+      }
+      steps {
+        echo "Hello, ${PERSON}, nice to meet you."
+      }
+    }
+
   }
 
   post {
