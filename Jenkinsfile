@@ -8,5 +8,11 @@ pipeline {
       }
     }
   }
+
+  post {
+    always {
+      echo 'OK'
+    }
+  }
 }
 
