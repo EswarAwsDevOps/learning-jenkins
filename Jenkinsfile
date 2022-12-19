@@ -34,7 +34,7 @@ pipeline {
         echo "${XYZ}"
         echo "${SSH}"
         echo "${APP_URL}"
-        sh 'mvn compile'
+        //sh 'mvn compile'
       }
     }
 
