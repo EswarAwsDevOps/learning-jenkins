@@ -20,7 +20,7 @@
 //  }
 //
 //  environment {
-//    ABC="abc"
+   ABC="abc"
 //    SSH = credentials("SSH")
 //  }
 //
@@ -64,9 +64,9 @@
 //      echo 'OK'
 //    }
 //  }
-//}
+// }
 //
-//
+
 
 
 pipeline {
